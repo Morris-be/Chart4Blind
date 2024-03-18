@@ -9,7 +9,9 @@
 7. [Running Tests](#running-tests)
 
 # Chart4Blind
-The code for the ACM IUI 2024 conference paper "Chart4Blind: An Intelligent Interface for Chart Accessibility Conversion" [Chart4Blind - Arxiv](https://arxiv.org/abs/2403.06693)
+The code for the ACM IUI 2024 conference paper "Chart4Blind: An Intelligent Interface for Chart Accessibility Conversion" [Chart4Blind - Arxiv](https://arxiv.org/abs/2403.06693).
+
+
 In a world driven by data visualization, ensuring the inclusive accessibility of charts for Blind and Visually Impaired (BVI) individuals
 remains a significant challenge. Charts are usually presented as raster graphics without textual and visual metadata needed for an
 equivalent exploration experience for BVI people. Additionally, converting these charts into accessible formats requires considerable
