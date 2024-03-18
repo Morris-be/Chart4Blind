@@ -7,31 +7,32 @@
 5. [Usage as developer](#usage-as-developer)
 6. [Distribute](#distribute)
 7. [Running Tests](#running-tests)
-8. [Authors](#authors)
 
 # Chart4Blind
-The importance of equal opportunity when it comes to interaction with digital media is important in the
-educational field. While the goal should be to make documents accessible in creation, retrospectively
-making documents accessible is of equal importance. Accessible doc at ACCESS takes a PDF and classifies
-various sections into their respective types. The “chart” class is what this project will focus on.
-
-After inputting an image, the user is taken to the User Interface of Chart2SVG. The intended output of the tool,
-which is achieved through a semi-autonomous approach, is an SVG or a CSV. The interface currently supports line charts 
-as a proof-of-concept. They can then either use the manual tool to input data-points or the automatic detection tool. 
-The automatic detection tool only requires a simple click process on one of the lines to add it to the working-set.
-Using a drop-down, multiple lines can be input simultaneously. 
+The code for the ACM IUI 2024 conference paper "Chart4Blind: An Intelligent Interface for Chart Accessibility Conversion" [Chart4Blind - Arxiv](https://arxiv.org/abs/2403.06693)
+In a world driven by data visualization, ensuring the inclusive accessibility of charts for Blind and Visually Impaired (BVI) individuals
+remains a significant challenge. Charts are usually presented as raster graphics without textual and visual metadata needed for an
+equivalent exploration experience for BVI people. Additionally, converting these charts into accessible formats requires considerable
+effort from sighted individuals. Digitizing charts with metadata extraction is just one aspect of the issue; transforming it into accessible
+modalities, such as tactile graphics, presents another difficulty. To address these disparities, we propose Chart4Blind, an intelligent
+user interface that converts bitmap image representations of line charts into universally accessible formats. Chart4Blind achieves
+this transformation by generating Scalable Vector Graphics (SVG), Comma-Separated Values (CSV), and alternative text exports, all
+comply with established accessibility standards. Through interviews and a formal user study, we demonstrate that even inexperienced
+sighted users can make charts accessible in an average of 4 minutes using Chart4Blind, achieving a System Usability Scale rating of
+90%. In comparison to existing approaches, Chart4Blind provides a comprehensive solution, generating end-to-end accessible SVGs
+suitable for assistive technologies such as embossed prints (papers and laser cut), 2D tactile displays, and screen readers.
 
 
 ## Features
 
 - A user is provided tools to convert an input image of a Line Chart
 - Manual Input of Data Points on Chart
-- Automatic Input of Data Points on Chart
+- Automatic Input of Data Points on Chart (With additional backend)
 - SVG and CSV output
 - OCR tool for Labels, Axis and descriptions entry
 - Guided tour
 - snackbar for feedback
-- SVG and CSV stored on server as training data if consent given
+- SVG and CSV stored on server as training data if consent given (With additional backend)
 
 ## Screenshots
 <img src="./public/1.png" width="700" alt="Editor with manual tool" />
@@ -43,7 +44,7 @@ Using a drop-down, multiple lines can be input simultaneously.
 
 ## Project Setup-Guide
 IMPORTANT: For automatic detection to work, a LineFormer equivalent backend must be running that accepts images [LineFormer](https://github.com/TheJaeLal/LineFormer). 
-See axiosRequests.ts. Alter this interface, and possibly the proxy in package.json, to provide the required data to the tool.
+See axiosRequests.ts in the api folder. Alter this interface, and possibly the proxy in package.json, to provide the required data to the tool.
 
 Clone this project into a directory of choice:
 Download and install **node** and **npm** through their website [NodeJS](https://nodejs.org/en/download/)
@@ -74,7 +75,3 @@ To run all tests, run the following command
 ```
 This creates a coverage directory with an icov-report. 
 View this report by opening the index.html file created in the coverage directory.
-
-## Authors
-- Morris Baumgarten-Egemole
-- Supervised by: Omar Moured and Dr. Thorsten Schwarz
